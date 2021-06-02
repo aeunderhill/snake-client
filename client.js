@@ -10,8 +10,8 @@ const connect = function () {
   // interpret incoming data as text
   conn.setEncoding("utf8");
 
-  conn.on('incomingData', (data) => {
-    console.log('This is your neighbourhood friendly server', data)
+  conn.on('connect', () => {
+    conn.write('Name: AEU'); 
   })
 
   return conn;
