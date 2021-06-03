@@ -1,4 +1,3 @@
-let data = 'u, d, l, r'
 
 let connection;
 
@@ -16,18 +15,19 @@ const setupInput = function(conn) {
   const handleUserInput = function(data) {
     if (key === '\u0003') {
       process.exit(); 
-    } else if (key === 'u') {
+    } else if (key === 'w') {
       conn.write('Move: up')
-    } else if (key === 'd') {
+    } else if (key === 'a') {
       conn.write('Move: down') 
-    } else if (key === 'l') {
+    } else if (key === 's') {
       conn.write('Move: left')
-    } else if (key === 'r') {
+    } else if (key === 'd') {
       conn.write('Move: right')
-    };
+    } 
+    conn.write("Say: I like to move it move it")
   };
-  
 
+ 
   
   
   
